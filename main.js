@@ -39,3 +39,16 @@ const listTeam =
 ]
 
 console.log(listTeam)
+
+let contenitore = document.getElementById("container");
+let box;
+
+for (const key in listTeam) {
+    const element = listTeam[key];
+
+    console.log(element)
+
+    box = document.createElement("p");
+    box.innerText = element;
+    contenitore.append(box);
+}
