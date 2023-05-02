@@ -40,15 +40,35 @@ const listTeam =
 
 console.log(listTeam)
 
+// let contenitore = document.getElementById("container");
+// let box;
+
+// for (const key in listTeam) {
+//     const element = listTeam[key];
+
+//     console.log(element.nome ,element.ruolo , element.foto)
+
+//     box = document.createElement("li");
+//     box.innerText = `${element.nome} , ${element.ruolo} , ${element.foto}`;
+//     contenitore.append(box);
+// }
+
 let contenitore = document.getElementById("container");
 let box;
+let foto;
 
 for (const key in listTeam) {
     const element = listTeam[key];
 
     console.log(element.nome ,element.ruolo , element.foto)
 
-    box = document.createElement("p");
-    box.innerText = `${element.nome} , ${element.ruolo} , ${element.foto}`;
-    contenitore.append(box);
+    box = document.createElement("li");
+    box.innerText = `${element.nome} , ${element.ruolo}`;
+
+    foto = document.createElement("img");
+    foto.src = element.foto;
+    foto.classList.add("pic")
+
+    contenitore.append(foto , box);
+
 }
