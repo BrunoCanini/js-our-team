@@ -46,9 +46,9 @@ let box;
 for (const key in listTeam) {
     const element = listTeam[key];
 
-    console.log(element)
+    console.log(element.nome ,element.ruolo , element.foto)
 
     box = document.createElement("p");
-    box.innerText = element;
+    box.innerText = `${element.nome} , ${element.ruolo} , ${element.foto}`;
     contenitore.append(box);
 }
